@@ -1,7 +1,8 @@
 ﻿  TSP.cpp
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(22): warning C4018: '<': signed/unsigned mismatch
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(33): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(31): warning C4018: '<': signed/unsigned mismatch
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(69): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(173): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int *'
   TSP_openGL.vcxproj -> G:\Matharishwa\git repos\TSP_openGL\TSP_openGL\Debug\TSP_openGL.exe
