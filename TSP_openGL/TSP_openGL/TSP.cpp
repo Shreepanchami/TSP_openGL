@@ -1,29 +1,28 @@
 #include<GL/glut.h>
 #include<math.h>
 #include<stdio.h>
+int radius = 50;
 int w = 2000, h = 2000;
 int costmatrix[100][100];
 int nodes;
 float node_x_y[100][2];
 void myinit()
 {
-	//glClearColor(1, 1, 1, 1);
-	//glClear(GL_COLOR_BUFFER_BIT);
-	//glColor3f(1, 0, 0);
+	
 	glClearColor(1, 1, 1, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 	gluOrtho2D(-1000, 1000, -1000, 1000);
 }
-
-/*void plot_point(int x, int y)
+void  write_node_num(float x,float y,int i)
 {
-	glColor3f(1, 0, 0);
-	glBegin(GL_POINTS);
-	glVertex2i(x, y);
-	glEnd();
+	char n1[10];
+	glColor3f(0, 0, 0);
+	glRasterPos2f(x,y);
+	_itoa_s(i + 1, n1, 10);
+	for (int i = 0; i < strlen(n1); i++)
+		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, n1[i]);
 	glFlush();
-}*/
-
+}
 void circ_draw(int xc, int yc, int r)
 {	
 	glBegin(GL_POINTS);
@@ -53,9 +52,21 @@ void find_nodes()
 
 	}
 }
+void connect_nodes(float x1,float y1,float x2, float y2)
+{
+	glColor3f(1, 0, 0);
+	float t = (y2 - y1) / (x2 - x1);
+	t = t*(3.14 / 180);
+	glBegin(GL_LINES);
+	glVertex2f(x1,y1);
+	glVertex2f(x2,y2);
+	glEnd();
+	glFlush();
+
+}
 void matrix()
 {
-
+	
 	printf("Enter the number of nodes");
 	scanf_s("%d", &nodes);
 	printf("Enter the cost matrix");
@@ -63,22 +74,20 @@ void matrix()
 		for (int column = 0; column < nodes; column++)
 			scanf_s("%d", &costmatrix[row][column]);
 	find_nodes();
-
-	char n1[10];
 	for (int i = 0; i < nodes; i++)
-	{
-		glColor3f(0, 0, 0);
-		glRasterPos2f(node_x_y[i][0]-12, node_x_y[i][1]-18);
-		_itoa_s(i + 1, n1, 10);
-		for (int i = 0; i < strlen(n1); i++)
-			glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, n1[i]);
-		glFlush();
-		circ_draw((int)node_x_y[i][0], (int)node_x_y[i][1], 50);
+	{	
+		circ_draw((int)node_x_y[i][0], (int)node_x_y[i][1], radius);
+		write_node_num(node_x_y[i][0] - 12, node_x_y[i][1]-18 ,i);
+		for (int j = 0; j < nodes; j++)
+			if (costmatrix[i][j] > 0)
+			{
+				glColor3f(0, 0, 1);
+				connect_nodes(node_x_y[i][0], node_x_y[i][1], node_x_y[j][0], node_x_y[j][1]);
+			}
 		
 	}
-
-
-
+	
+		
 }
 void display()
 {
