@@ -1,5 +1,6 @@
 ﻿  TSP.cpp
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(34): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+g:\matharishwa\git repos\tsp_opengl\tsp_opengl\tsp_opengl\tsp.cpp(73): warning C4018: '<': signed/unsigned mismatch
   TSP_openGL.vcxproj -> G:\Matharishwa\git repos\TSP_openGL\TSP_openGL\Debug\TSP_openGL.exe
